@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- splide.js -->
+    <link rel="stylesheet" href="src/splide-3.3.0/dist/css/splide.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- montserrat -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- passion one -->
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+    <!-- font class -->
+    <link rel="stylesheet" href="src/css/font.css">
+    <!-- my-css -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- css animate -->
+    <link rel="stylesheet" href="src/css/animation.css">
+
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar1 d-flex flex-lg-row flex-column fixed-top w-100">
+        <!-- navbar-left -->
+        <div class="navbar-title d-flex align-items-center justify-content-between w-lg-50 ps-4 py-3">
+            <!-- logo -->
+            <img src="src/img/asdasd.png" alt="img" class="w-100 logo">
+            <!-- seacrhing -->
+            <form action="/" class="montserratMedium500">
+                <input type="text" placeholder="Tentang Balawan..">
+            </form>
+            <!-- hamburger menu -->
+            <div class="hamburger-menu d-flex flex-column align-items-end me-2 d-lg-none">
+                <div class="hamburger-1"></div>
+                <div class="hamburger-2"></div>
+                <div class="hamburger-3"></div>
+            </div>
+            <!-- navbar-account -->
+            <div class="action d-lg-none d-block">
+                <a class="ps-4 d-flex gap-3 user-action dropdown dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                    role="button" aria-expanded="false">
+                    <!-- icon -->
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-circle"
+                        class="svg-inline--fa fa-user-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512" style="width: 25px; color:black">
+                        <path fill="currentColor"
+                            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu" style="max-width: 50px;">
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cog"></i>
+                            <span class="ps-2">Pengaturan</span>
+                        </a>
+                    <li>
+                        <hr class="dropdown-divider">
+                    <li>
+                        <a class="dropdown-item text-danger" href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="ps-2">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- navbar-right -->
+        <div class="navbar1-link d-lg-flex d-none justify-content-lg-end">
+            <ul
+                class="d-flex flex-lg-row flex-column justify-content-lg-end justify-content-evenly align-items-center pe-lg-4 py-3 montserratMedium500">
+                <li><a href="#" class="p-2">Home</a></li>
+                <li><a href="../news/index.html" class="p-2">News</a></li>
+                <li><a href="index.html#course" class="p-2">Learning</a></li>
+                <li><a href="index.html#testimoni" class="p-2">Testimoni</a></li>
+                <li><a href="#" class="p-2">About</a></li>
+            </ul>
+        </div>
+        <!-- navbar-account -->
+        <div class="navbar-account action d-lg-flex d-none align-items-center">
+            <a class="ps-4 d-flex gap-3 user-action dropdown dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                role="button" aria-expanded="false">
+                <!-- icon -->
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-circle"
+                    class="svg-inline--fa fa-user-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 496 512" style="width: 25px; color:black">
+                    <path fill="currentColor"
+                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
+                    </path>
+                </svg>
+            </a>
+            <ul class="dropdown-menu" style="max-width: 50px;">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cog"></i>
+                        <span class="ps-2">Pengaturan</span>
+                    </a>
+                <li>
+                    <hr class="dropdown-divider">
+                <li>
+                    <a class="dropdown-item text-danger" href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="ps-2">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="overlay-1">
+            <div class="container vh-100-2 d-flex flex-column justify-content-center text-white">
+                <h3 class="montserratSemiBold600 animate1 toUp">Bli usernamenya</h3>
+                <h1 class="montserratBold900 animate1 toUp">BALAWAN</h1>
+                <p class="w-75 montserratExtraLight200 animate1 toUp">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Blanditiis iste obcaecati
+                    accusamus rem
+                    tempora
+                    cupiditate aliquam sit maxime cumque magnam!</p>
+                <!-- button -->
+                <div class="button text-center animate1 toUp">
+                    <div class="button-main">
+                        <a href="#" class="montserratMedium500">Tentang Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content1 -->
+    <div class="bg-1">
+        <div class="content1 container">
+            <div class="d-flex flex-xl-row flex-column-reverse">
+                <!-- left -->
+                <div class="col-xl-6 col-12">
+                    <!-- card -->
+                    <div
+                        class="card1 d-flex flex-md-row flex-column gap-4 my-5 align-items-center align-items-md-start animate1 toRight">
+                        <img src="src/img/Asset 13.jpg" alt="img" class="w-100">
+                        <div class="text-white">
+                            <h4 class="montserratBold700">Berita Terbaru</h4>
+                            <h6 class="montserratMedium500Italic">12/21/2021</h6>
+                            <p class="mb-4 w-75 text-justify montserratMedium500">Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Veniam, est.
+                            </p>
+                            <a href="../newsDetail/index.html" class="button montserratBold700">Read More</a>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div
+                        class="card1 d-flex flex-md-row flex-column gap-4 my-5 align-items-center align-items-md-start animate1 toRight">
+                        <img src="src/img/Asset 13.jpg" alt="img" class="w-100">
+                        <div class="text-white">
+                            <h4 class="montserratBold700">Berita Terbaru</h4>
+                            <h6 class="montserratMedium500Italic">12/21/2021</h6>
+                            <p class="mb-4 w-75 text-justify montserratMedium500">Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Veniam, est.
+                            </p>
+                            <a href="../newsDetail/index.html" class="button montserratBold700">Read More</a>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div
+                        class="card1 d-flex flex-md-row flex-column gap-4 my-5 align-items-center align-items-md-start animate1 toRight">
+                        <img src="src/img/Asset 13.jpg" alt="img" class="w-100">
+                        <div class="text-white">
+                            <h4 class="montserratBold700">Berita Terbaru</h4>
+                            <h6 class="montserratMedium500Italic">12/21/2021</h6>
+                            <p class="mb-4 w-75 text-justify montserratMedium500">Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit.
+                                Veniam, est.
+                            </p>
+                            <a href="../newsDetail/index.html" class="button montserratBold700">Read More</a>
+                        </div>
+                    </div>
+                    <!-- berita lainnya -->
+                    <div class="otherNews position-relative animate1 toRight">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293 45">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M293,45H0V0H260Z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <a href="#" class="button2 position-absolute montserratBold700 ">BERITA
+                            LAINNYA...</a>
+                    </div>
+                </div>
+                <!-- right -->
+                <div class="rightContent col animate1 toLeft" style="">
+                    <h2 class="text-center text-white bg-2 montserratBold900">Hot News</h2>
+                    <img src="src/img/Asset 12.jpg" alt="img" class="w-100">
+                    <div class="bg-white">
+                        <div class="row p-3">
+                            <!-- left -->
+                            <div class="col">
+                                <h3 class="montserratExtraBol800">Ini Judul Berita Utama</h3>
+                                <h6 class="montserratMedium500Italic mb-5">12/21/2021</h6>
+                                <a href="../newsDetail/index.html" class="button montserratBold700">Read More</a>
+                            </div>
+                            <!-- right -->
+                            <div class="col">
+                                <p class="montserratMedium500">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Sint, dicta. Minima ullam
+                                    fugit a deleniti, consequuntur minus harum dolor repellendus?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- content2 -->
+    <div class="bg-1">
+        <div class="container content2">
+            <div class="row d-flex justify-content-center align-items-center vh-100-2 py-5">
+                <!-- left -->
+                <div
+                    class="left col-md-6 col-12 position-relative d-flex justify-content-center mb-md-0 pb-md-0 pb-5 mb-5">
+                    <img src="src/img/Asset 7.jpg" alt="img" class="w-100 animate1 toUp">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417.24 588.38"
+                        class="position-absolute animate1 toUp">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #e52323;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1" d="M417.24,588.38H0V0L148.42,237.78Q282.84,413.07,417.24,588.38Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <!-- right -->
+                <div class="right col-md-6 col-12 text-white mt-md-0">
+                    <div>
+                        <h2 class="montserratBold900 animate1 toRight">SEJARAH BALAWAN</h2>
+                        <h5 class="montserratBold700Italic animate1 fade1">"QUOTES QUOTES"</h5>
+                        <div class="montserratMedium500 animate1 fade1 paragraph">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                                assumenda autem esse facilis
+                                magnam deleniti quam fugit quas, ut modi.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                                assumenda autem esse facilis
+                                magnam deleniti quam fugit quas, ut modi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content3 -->
+    <div class="bg-1">
+        <div class="container content3 bg-1 vh-100-2 d-flex justify-content-center flex-column">
+            <h2 class="text-white mb-5 montserratBold900 animate1 toRight">OUR SERVICES</h2>
+            <div class="row gap-md-0 gap-4">
+                <!-- card2 -->
+                <div class="col-xl-3 col-sm-6 card2 animate1 toUp">
+                    <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 148.97 115.85">
+                        <defs>
+                            <style>
+                                .cls-1-2 {
+                                    fill: url(#linear-gradient);
+                                }
+                            </style>
+                            <linearGradient id="linear-gradient" y1="57.92" x2="148.97" y2="57.92"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#93428f" />
+                                <stop offset="0.3" stop-color="#d2003a" />
+                                <stop offset="0.37" stop-color="#d2183a" />
+                                <stop offset="0.51" stop-color="#d2433a" />
+                                <stop offset="0.65" stop-color="#d2643a" />
+                                <stop offset="0.78" stop-color="#d27c3a" />
+                                <stop offset="0.9" stop-color="#d28b3a" />
+                                <stop offset="1" stop-color="#d2903a" />
+                            </linearGradient>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1-2"
+                                    d="M72.51,30.05,24.83,69.32v42.39A4.14,4.14,0,0,0,29,115.85l29-.08a4.14,4.14,0,0,0,4.12-4.14V86.88a4.14,4.14,0,0,1,4.13-4.14H82.76a4.14,4.14,0,0,1,4.13,4.14v24.74A4.15,4.15,0,0,0,91,115.77h0l29,.08a4.14,4.14,0,0,0,4.14-4.14V69.3L76.47,30.05a3.16,3.16,0,0,0-4,0Zm75.32,26.7L126.21,38.92V3.1a3.1,3.1,0,0,0-3.1-3.1H108.62a3.1,3.1,0,0,0-3.1,3.1V21.88l-23.15-19a12.42,12.42,0,0,0-15.78,0L1.13,56.75a3.1,3.1,0,0,0-.42,4.36h0l6.6,8a3.1,3.1,0,0,0,4.37.43h0l60.83-50.1a3.16,3.16,0,0,1,4,0l60.83,50.1a3.1,3.1,0,0,0,4.37-.41h0l6.6-8a3.09,3.09,0,0,0-.43-4.36Z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <h3 class="text-color-1 montserratExtraBol800 display-5">Title</h3>
+                    <p class="text-white montserratMedium500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem,
+                        reiciendis.</p>
+                </div>
+                <!-- card2 -->
+                <div class="col-xl-3 col-sm-6 card2 animate1 toUp">
+                    <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 148.97 115.85">
+                        <defs>
+                            <style>
+                                .cls-1-2 {
+                                    fill: url(#linear-gradient);
+                                }
+                            </style>
+                            <linearGradient id="linear-gradient" y1="57.92" x2="148.97" y2="57.92"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#93428f" />
+                                <stop offset="0.3" stop-color="#d2003a" />
+                                <stop offset="0.37" stop-color="#d2183a" />
+                                <stop offset="0.51" stop-color="#d2433a" />
+                                <stop offset="0.65" stop-color="#d2643a" />
+                                <stop offset="0.78" stop-color="#d27c3a" />
+                                <stop offset="0.9" stop-color="#d28b3a" />
+                                <stop offset="1" stop-color="#d2903a" />
+                            </linearGradient>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1-2"
+                                    d="M72.51,30.05,24.83,69.32v42.39A4.14,4.14,0,0,0,29,115.85l29-.08a4.14,4.14,0,0,0,4.12-4.14V86.88a4.14,4.14,0,0,1,4.13-4.14H82.76a4.14,4.14,0,0,1,4.13,4.14v24.74A4.15,4.15,0,0,0,91,115.77h0l29,.08a4.14,4.14,0,0,0,4.14-4.14V69.3L76.47,30.05a3.16,3.16,0,0,0-4,0Zm75.32,26.7L126.21,38.92V3.1a3.1,3.1,0,0,0-3.1-3.1H108.62a3.1,3.1,0,0,0-3.1,3.1V21.88l-23.15-19a12.42,12.42,0,0,0-15.78,0L1.13,56.75a3.1,3.1,0,0,0-.42,4.36h0l6.6,8a3.1,3.1,0,0,0,4.37.43h0l60.83-50.1a3.16,3.16,0,0,1,4,0l60.83,50.1a3.1,3.1,0,0,0,4.37-.41h0l6.6-8a3.09,3.09,0,0,0-.43-4.36Z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <h3 class="text-color-1 montserratExtraBol800 display-5">Title</h3>
+                    <p class="text-white montserratMedium500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem,
+                        reiciendis.</p>
+                </div>
+                <!-- card2 -->
+                <div class="col-xl-3 col-sm-6 card2 animate1 toUp">
+                    <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 148.97 115.85">
+                        <defs>
+                            <style>
+                                .cls-1-2 {
+                                    fill: url(#linear-gradient);
+                                }
+                            </style>
+                            <linearGradient id="linear-gradient" y1="57.92" x2="148.97" y2="57.92"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#93428f" />
+                                <stop offset="0.3" stop-color="#d2003a" />
+                                <stop offset="0.37" stop-color="#d2183a" />
+                                <stop offset="0.51" stop-color="#d2433a" />
+                                <stop offset="0.65" stop-color="#d2643a" />
+                                <stop offset="0.78" stop-color="#d27c3a" />
+                                <stop offset="0.9" stop-color="#d28b3a" />
+                                <stop offset="1" stop-color="#d2903a" />
+                            </linearGradient>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1-2"
+                                    d="M72.51,30.05,24.83,69.32v42.39A4.14,4.14,0,0,0,29,115.85l29-.08a4.14,4.14,0,0,0,4.12-4.14V86.88a4.14,4.14,0,0,1,4.13-4.14H82.76a4.14,4.14,0,0,1,4.13,4.14v24.74A4.15,4.15,0,0,0,91,115.77h0l29,.08a4.14,4.14,0,0,0,4.14-4.14V69.3L76.47,30.05a3.16,3.16,0,0,0-4,0Zm75.32,26.7L126.21,38.92V3.1a3.1,3.1,0,0,0-3.1-3.1H108.62a3.1,3.1,0,0,0-3.1,3.1V21.88l-23.15-19a12.42,12.42,0,0,0-15.78,0L1.13,56.75a3.1,3.1,0,0,0-.42,4.36h0l6.6,8a3.1,3.1,0,0,0,4.37.43h0l60.83-50.1a3.16,3.16,0,0,1,4,0l60.83,50.1a3.1,3.1,0,0,0,4.37-.41h0l6.6-8a3.09,3.09,0,0,0-.43-4.36Z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <h3 class="text-color-1 montserratExtraBol800 display-5">Title</h3>
+                    <p class="text-white montserratMedium500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem,
+                        reiciendis.</p>
+                </div>
+                <!-- card3 -->
+                <div class="col-xl-3 col-sm-6 card2 animate1 toUp">
+                    <svg class="mb-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 148.97 115.85">
+                        <defs>
+                            <style>
+                                .cls-1-2 {
+                                    fill: url(#linear-gradient);
+                                }
+                            </style>
+                            <linearGradient id="linear-gradient" y1="57.92" x2="148.97" y2="57.92"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#93428f" />
+                                <stop offset="0.3" stop-color="#d2003a" />
+                                <stop offset="0.37" stop-color="#d2183a" />
+                                <stop offset="0.51" stop-color="#d2433a" />
+                                <stop offset="0.65" stop-color="#d2643a" />
+                                <stop offset="0.78" stop-color="#d27c3a" />
+                                <stop offset="0.9" stop-color="#d28b3a" />
+                                <stop offset="1" stop-color="#d2903a" />
+                            </linearGradient>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-1-2"
+                                    d="M72.51,30.05,24.83,69.32v42.39A4.14,4.14,0,0,0,29,115.85l29-.08a4.14,4.14,0,0,0,4.12-4.14V86.88a4.14,4.14,0,0,1,4.13-4.14H82.76a4.14,4.14,0,0,1,4.13,4.14v24.74A4.15,4.15,0,0,0,91,115.77h0l29,.08a4.14,4.14,0,0,0,4.14-4.14V69.3L76.47,30.05a3.16,3.16,0,0,0-4,0Zm75.32,26.7L126.21,38.92V3.1a3.1,3.1,0,0,0-3.1-3.1H108.62a3.1,3.1,0,0,0-3.1,3.1V21.88l-23.15-19a12.42,12.42,0,0,0-15.78,0L1.13,56.75a3.1,3.1,0,0,0-.42,4.36h0l6.6,8a3.1,3.1,0,0,0,4.37.43h0l60.83-50.1a3.16,3.16,0,0,1,4,0l60.83,50.1a3.1,3.1,0,0,0,4.37-.41h0l6.6-8a3.09,3.09,0,0,0-.43-4.36Z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <h3 class="text-color-1 montserratExtraBol800 display-5">Title</h3>
+                    <p class="text-white montserratMedium500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatem,
+                        reiciendis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content4 -->
+    <div class="bg-1">
+        <div class="container content4 bg-1 vh-100-2 d-flex justify-content-center flex-column align-items-center py-5"
+            id="course">
+            <h2 class="text-white montserratBold900 animate1 fade1">Our Course</h2>
+            <div class="d-flex row row-cols-xl-3 row-cols-sm-2 row-cols-1 justify-content-center align-items-center">
+                <!-- card3 -->
+                <div class="card3 col animate1 toUp">
+                    <div class="position-relative">
+                        <img src="src/img/Asset 16.jpg" alt="img" class="w-100">
+                        <!-- desc -->
+                        <div>
+                            <h4 class="mb-3  text-white display-5 montserratExtraBol800">Lesson Piano</h4>
+                            <a href="#" class="button3 montserratBold700 p-2">Read More</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.54 287.54"
+                            class="position-absolute w-100">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M371.54,287.54H0V0L132.16,116.2Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card3 col animate1 toUp">
+                    <div class="position-relative">
+                        <img src="src/img/Asset 16.jpg" alt="img" class="w-100">
+                        <!-- desc -->
+                        <div>
+                            <h4 class="mb-3  text-white display-5 montserratExtraBol800">Lesson Piano</h4>
+                            <a href="#" class="button3 montserratBold700 p-2">Read More</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.54 287.54"
+                            class="position-absolute w-100">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M371.54,287.54H0V0L132.16,116.2Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card3 col animate1 toUp">
+                    <div class="position-relative">
+                        <img src="src/img/Asset 16.jpg" alt="img" class="w-100">
+                        <!-- desc -->
+                        <div>
+                            <h4 class="mb-3  text-white display-5 montserratExtraBol800">Lesson Piano</h4>
+                            <a href="#" class="button3 montserratBold700 p-2">Read More</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.54 287.54"
+                            class="position-absolute w-100">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M371.54,287.54H0V0L132.16,116.2Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card3 col animate1 toUp">
+                    <div class="position-relative">
+                        <img src="src/img/Asset 16.jpg" alt="img" class="w-100">
+                        <!-- desc -->
+                        <div>
+                            <h4 class="mb-3  text-white display-5 montserratExtraBol800">Lesson Piano</h4>
+                            <a href="#" class="button3 montserratBold700 p-2">Read More</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.54 287.54"
+                            class="position-absolute w-100">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M371.54,287.54H0V0L132.16,116.2Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <!-- card3 -->
+                <div class="card3 col animate1 toUp">
+                    <div class="position-relative">
+                        <img src="src/img/Asset 16.jpg" alt="img" class="w-100">
+                        <!-- desc -->
+                        <div>
+                            <h4 class="mb-3  text-white display-5 montserratExtraBol800">Lesson Piano</h4>
+                            <a href="#" class="button3 montserratBold700 p-2">Read More</a>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.54 287.54"
+                            class="position-absolute w-100">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e52323;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <path class="cls-1" d="M371.54,287.54H0V0L132.16,116.2Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- galeri -->
+    <div class="bg-1">
+        <div class="container galeri vh-100-2 d-flex justify-content-center align-items-center flex-column">
+            <h2 class="text-center text-white montserratBold900 animate1 fade1">GALERI</h2>
+            <div class="d-flex row row-cols-xl-3 row-cols-md-2 row-cols-1">
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 14.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 15.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 14.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 15.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 14.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 15.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 14.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 15.jpg" alt="img" class="w-100 p-2">
+                </div>
+                <!-- card4 -->
+                <div class="card4 animate1 toUp col d-flex align-items-center">
+                    <img src="src/img/Asset 14.jpg" alt="img" class="w-100 p-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- testimoni -->
+    <div class="bg-1">
+        <div class="container-md testimoni vh-100-2 d-flex justify-content-center align-items-center flex-column"
+            id="testimoni">
+            <h2 class="text-white text-center montserratBold900 animate1 fade1">Apa Kata Mereka?</h2>
+            <!-- main -->
+            <div class="testimoniMain animate1 toUp">
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list d-flex align-items-center">
+                            <li class="splide__slide px-2 position-relative">
+                                <div class="testimoni-card">
+                                    <div class="testimoni-card-main">
+                                        <h3 class="text-danger position-absolute passionOneReguler400">"</h3>
+                                        <p class="montserratBold700 text-center">Lorem, ipsum dolor sit amet consectetur
+                                        </p>
+                                        <div class="text-center">
+                                            <img src="src/img/Asset 16 (2).jpg" alt="" class="userProfile">
+                                            <h5 class="mt-4 montserratMedium500">Made Udin</h5>
+                                            <p class="montserratLight300Italic">12/12/2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bg -->
+                                <div class="bg-testimoni"></div>
+                            </li>
+                            <li class="splide__slide px-2 position-relative">
+                                <div class="testimoni-card">
+                                    <div class="testimoni-card-main">
+                                        <h3 class="text-danger position-absolute passionOneReguler400">"</h3>
+                                        <p class="montserratBold700 text-center">Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit. Aperiam vel
+                                            suscipit
+                                            praesentium eos maxime sit quos in debitis, dolore provident. Lorem ipsum
+                                            dolor sit, amet consectetur adipisicing elit. Ipsa, unde. </p>
+                                        <div class="text-center">
+                                            <img src="src/img/Asset 16 (2).jpg" alt="" class="userProfile">
+                                            <h5 class="mt-4 montserratMedium500">Made Udin</h5>
+                                            <p class="montserratLight300Italic">12/12/2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bg -->
+                                <div class="bg-testimoni"></div>
+                            </li>
+                            <li class="splide__slide px-2 position-relative">
+                                <div class="testimoni-card">
+                                    <div class="testimoni-card-main">
+                                        <h3 class="text-danger position-absolute passionOneReguler400">"</h3>
+                                        <p class="montserratBold700 text-center">Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit. Aperiam vel
+                                            suscipit
+                                            praesentium eos maxime sit quos in debitis, dolore provident.</p>
+                                        <div class="text-center">
+                                            <img src="src/img/Asset 16 (2).jpg" alt="" class="userProfile">
+                                            <h5 class="mt-4 montserratMedium500">Made Udin</h5>
+                                            <p class="montserratLight300Italic">12/12/2021</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bg -->
+                                <div class="bg-testimoni"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="bg-1 py-5">
+        <div class="footer container-xl row gap-lg-0 gap-5">
+            <div class="logo col-lg-3 col-12 d-flex justify-content-lg-start justify-content-center">
+                <img src="src/img/asdasd.png" alt="img" class="w-100">
+            </div>
+            <div class="col-lg-2 col-12 d-flex flex-column align-items-center navigation">
+                <div class="d-flex flex-column align-items-lg-start align-items-center">
+                    <h5 class="text-white montserratBold700">NAVIGATION</h5>
+                    <div
+                        class="d-flex flex-column flex-row gap-lg-0 gap-2 montserratLight300 text-lg-start text-center">
+                        <a href="#">Home</a>
+                        <a href="#">News</a>
+                        <a href="#">Course</a>
+                        <a href="#">Learning</a>
+                        <a href="#">Testimoni</a>
+                        <a href="#">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 sosialMedia">
+                <h5 class="text-center text-white mb-4 montserratBold700">SOSIAL MEDIA</h5>
+                <div class="d-flex justify-content-evenly">
+                    <!-- instagram -->
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                            class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- youtube -->
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube"
+                            class="svg-inline--fa fa-youtube fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- twitter -->
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                            class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                            </path>
+                        </svg>
+                    </a>
+                    <!-- facebook -->
+                    <a href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+                            class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 support">
+                <h4 class="text-center text-white  montserratBold700">SUPPPORT</h4>
+                <div class="d-flex align-items-center flex-column">
+                    <a href="#" class="montserratLight300">Fontawesome</a>
+                    <img src="src/img/Asset 8.png" alt="img">
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <p class="text-center text-white montserratLight300 pt-4">Copyright © 2021. All right reserved | support by GANA
+            IT
+            Consultant</p>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="src/js/script.js"></script>
+    <!-- split js -->
+    <script src="src/splide-3.3.0/dist/js/splide.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

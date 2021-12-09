@@ -1,0 +1,100 @@
+/* source : https://fonts.google.com/specimen/Montserrat?query=montserr */
+
+.montserratThin100 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+
+.montserratThin100Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.montserratExtraLight200 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+.montserratExtraLight200Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.montserratLight300 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.montserratLight300Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.montserratReguler400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.montserratReguler400Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.montserratMedium500 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.montserratMedium500Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.montserratSemiBold600 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.montserratSemiBold600Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.montserratBold700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.montserratBold700Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.montserratExtraBol800 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.montserratExtraBol800Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.montserratBold900 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.montserratBold900Italic {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}

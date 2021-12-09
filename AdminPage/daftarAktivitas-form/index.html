@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- google-font Nunito  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="src/css/font.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="src/lib/fontawesome-free-5.15.1-web/css/all.min.css">
+
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+    <!-- my-css -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Admin Template</title>
+</head>
+
+<body>
+    <!-- body -->
+    <div class=" d-flex bg-1">
+        <!-- nav -->
+        <div class="nav col-xl-2 col-md-3 col-6 bg-1 vh-100-2 ps-md-4 flex-column position-md-absolute false-md">
+            <!-- logo -->
+            <div class="logo py-3 px-3 pb-5 position-relative">
+                <img src="src/img/logo.png" alt="logo.png" class="w-100" style="max-width: 100px;">
+                <div class="hamburger-menu1">
+                    <i class="back fas fa-arrow-left text-white position-absolute d-md-none d-block"
+                        style="font-size: 1.5rem;"></i>
+                </div>
+            </div>
+            <!-- nav-item -->
+            <div class="ps-1">
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="far fa-calendar-alt"></i>
+                    <a href="#" class="ps-3 item">Kalender</a>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-clipboard-list"></i>
+                    <a href="#" class="ps-3 item">Aktivitas</a>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-database"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Data Master</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-medal mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Siswa</span>
+                        </a>
+                        <a class="dropdown-item" href="/teachers"><i class="fas fa-users mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Instruktur</span>
+                        </a>
+                        <a class="dropdown-item" href="/courses"><i class="fa fa-microphone-alt mr-2"
+                                aria-hidden="true"></i>
+                            <span class="ps-2">Kursus</span>
+                        </a>
+                        <a class="dropdown-item" href="/programs">
+                            <i class="fa fa-music mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Program</span>
+                        </a>
+                        <a class="dropdown-item" href="/studios">
+                            <i class="fas fa-cube mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Studio</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Laporan</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="far fa-file-alt mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Aktivitas Siswa</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-users"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Instruktur</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-star mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Aktivitas Instruktur</span>
+                        </a>
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-money-check mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Pembayaran Instruktur</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-clipboard-check"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Administrasi</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-user mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Pengguna</span>
+                        </a>
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-calendar-day mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Hari Libur</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- main-content -->
+        <div class="main-content col-xl-10 col-md-9 col-12 vh-100-2 bg-white py-3 container-fluid">
+            <!-- navbar -->
+            <div class="ps-4 d-flex justify-content-between">
+                <!-- hamburger menu -->
+                <div class="hamburger-menu2 d-md-none d-block">
+                    <i class="fas fa-bars clr-1" style="font-size:2rem"></i>
+                </div>
+                <!-- search -->
+                <div class="search-navbar">
+                    <form action="">
+                        <input type="text" class="search-input shadow py-2 px-4" placeholder="searching...">
+                    </form>
+                </div>
+                <!-- action-user -->
+                <div class="d-flex gap-2 px-3">
+                    <!-- notification -->
+                    <div class="gap-4 d-flex">
+                        <!-- message -->
+                        <div class="message">
+                            <a class="dropdown dropdown-toggle scroll" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                                <i class="fas fa-comments clr-1" style="font-size:1.5rem">
+                                </i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                            </div>
+                        </div>
+                        <!-- notification -->
+                        <div class="notifications">
+                            <a class="dropdown dropdown-toggle scroll" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                                <i class="fas fa-bell clr-1" style="font-size:1.5rem"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- message -->
+                                    <ul>
+                                        <li class="list-group">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">List group item heading</h5>
+                                                <small>3 days ago</small>
+                                            </div>
+                                            <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                            <small>And some small print.</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- action -->
+                    <div class="action">
+                        <a class="ps-4 d-flex gap-3 user-action dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-expanded="false">
+                            <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                            <p class="d-md-block d-none">Made Adi</p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="ps-2">Pengaturan</span>
+                                </a>
+                            <li>
+                                <hr class="dropdown-divider">
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="ps-2">Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <div class="main py-5 px-3">
+                <h1 class="h3">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="fw-bold">Formulir Aktivitas</span>
+                </h1>
+                <!-- action button -->
+                <div class="d-flex gap-2">
+                    <!-- tambah -->
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn bg-success shadow rounded-3 p-3 button hover-fade fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#pembayaran">
+                            <i class="fas fa-plus"></i>
+                            <span class="ps-2">Pembayaran</span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="pembayaran" tabindex="-1" aria-labelledby="pembayaranLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="pembayaranLabel">Detail</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- form -->
+                                    <form action="">
+                                        <div class="modal-body">
+                                            <fieldset disabled>
+                                                <!-- biaya pendaftaran -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Pendaftaran</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya kegiatan -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Kegiatan</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya lainnya -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Lainnya</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- diskon -->
+                                                <div class="input-group mb-3 row">
+                                                    <label for="diskon">
+                                                        Diskon
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <input type="number" class="form-control col"
+                                                                    id="diskon" style="border-radius: 5px 0 0 5px;">
+                                                                <span
+                                                                    class="input-group-text col-3 justify-content-center"
+                                                                    style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                id="exampleInputEmail1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- jumlah total -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Jumlah
+                                                        Total</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- total dibayar -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Total
+                                                        Dibayar</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- sisa belum -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Sisa
+                                                        Belum</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                            <button type="button" class="btn bg-primary text-white">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- preview pembayaran -->
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn bg-success shadow rounded-3 p-3 button hover-fade fw-bold"
+                            data-bs-toggle="modal" data-bs-target="#previewPemabayaran">
+                            <i class="fas fa-money-check"></i>
+                            <span class="ps-2">Lihat Pembayaran</span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="previewPemabayaran" tabindex="-1"
+                            aria-labelledby="previewPemabayaranLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="previewPemabayaranLabel">Detail</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- form -->
+                                    <form action="">
+                                        <div class="modal-body">
+                                            <fieldset disabled>
+                                                <!-- biaya pendaftaran -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Pendaftaran</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya kegiatan -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Kegiatan</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya lainnya -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Lainnya</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- diskon -->
+                                                <div class="input-group mb-3 row">
+                                                    <label for="diskon">
+                                                        Diskon
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <input type="number" class="form-control col"
+                                                                    id="diskon" style="border-radius: 5px 0 0 5px;">
+                                                                <span
+                                                                    class="input-group-text col-3 justify-content-center"
+                                                                    style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                id="exampleInputEmail1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- jumlah total -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Jumlah
+                                                        Total</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- total dibayar -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Total
+                                                        Dibayar</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- sisa belum -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Sisa
+                                                        Belum</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                            <button type="button" class="btn bg-primary text-white">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- form -->
+                <div class="my-5">
+                    <form action="">
+                        <!-- top -->
+                        <div class="row">
+                            <!-- left -->
+                            <div class="col">
+                                <!-- no registrasi-->
+                                <div class="mb-3">
+                                    <fieldset disabled>
+                                        <label for="exampleInputEmail1" class="form-label">Nomor Registrasi</label>
+                                        <input type="number" class="form-control" id="exampleInputEmail1"
+                                            value="09865432">
+                                    </fieldset>
+                                </div>
+                                <!-- studio & tanggal mulai -->
+                                <div class="row">
+                                    <!-- studio -->
+                                    <div class="col mb-3">
+                                        <fieldset disabled>
+                                            <label for="exampleInputEmail1" class="form-label">Studio</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Studio Tersedia</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+                                    <!-- tanggal mulai -->
+                                    <div class="col mb-3">
+                                        <fieldset disabled>
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal Mulai</label>
+                                            <input type="date" class="form-control" id="exampleInputEmail1"
+                                                value="22/04/2020">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <!-- paket khusus -->
+                                <div class="mb-3">
+                                    <fieldset disabled>
+                                        <label for="exampleInputEmail1" class="form-label">Paket Khusus</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Gitar Triwulan</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <!-- total biaya -->
+                                <label for="total">Total Biaya</label>
+                                <div class="input-group mb-3 row col-2">
+                                    <fieldset disabled class="col pe-0">
+                                        <span class="input-group-text" style="border-radius: 5px 0px 0 5px;">$</span>
+                                    </fieldset>
+                                    <!-- input -->
+                                    <fieldset disabled class="col-7  p-0">
+                                        <input type="text" class="form-control" id="total" value="1000"
+                                            style="border-radius:0;">
+                                    </fieldset>
+                                    <!-- detail -->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="col-3 btn bg-primary text-white" data-bs-toggle="modal"
+                                        data-bs-target="#detailFormAktivitas" style="border-radius: 0px 5px 5px 0px;">
+                                        Detail
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="detailFormAktivitas" tabindex="-1"
+                                        aria-labelledby="detailFormAktivitasLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="detailFormAktivitasLabel">Detail</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <!-- form -->
+                                                <form action="">
+                                                    <div class="modal-body">
+                                                        <fieldset disabled>
+                                                            <!-- biaya pendaftaran -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Biaya
+                                                                    Pendaftaran</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                            <!-- biaya kegiatan -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Biaya
+                                                                    Kegiatan</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                            <!-- biaya lainnya -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Biaya
+                                                                    Lainnya</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                            <!-- diskon -->
+                                                            <div class="input-group mb-3 row">
+                                                                <label for="diskon">
+                                                                    Diskon
+                                                                </label>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="row">
+                                                                            <input type="number"
+                                                                                class="form-control col" id="diskon"
+                                                                                style="border-radius: 5px 0 0 5px;">
+                                                                            <span
+                                                                                class="input-group-text col-3 justify-content-center"
+                                                                                style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <input type="number" class="form-control"
+                                                                            id="exampleInputEmail1">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- jumlah total -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1"
+                                                                    class="form-label">Jumlah Total</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                            <!-- total dibayar -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Total
+                                                                    Dibayar</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                            <!-- sisa belum -->
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Sisa
+                                                                    Belum</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="exampleInputEmail1">
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                                        <button type="button"
+                                                            class="btn bg-primary text-white">Simpan</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- sisa belum terbayar -->
+                                <fieldset disabled>
+                                    <label for="total">Sisa Belum Terbayar</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">$</span>
+                                        <input type="text" class="form-control" id="total" value="10000">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- right -->
+                            <div class="col">
+                                <!-- tanggal registrasi-->
+                                <div class="mb-3">
+                                    <fieldset disabled>
+                                        <label for="exampleInputEmail1" class="form-label">Tanggal Registrasi</label>
+                                        <input type="date" class="form-control" id="exampleInputEmail1"
+                                            value="09865432">
+                                    </fieldset>
+                                </div>
+                                <!-- hari & jam -->
+                                <div class="row">
+                                    <!-- hari -->
+                                    <div class="col mb-3">
+                                        <fieldset disabled>
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal
+                                                Registrasi</label>
+                                            <input type="date" class="form-control" id="exampleInputEmail1"
+                                                value="09865432">
+                                        </fieldset>
+                                    </div>
+                                    <!-- jam -->
+                                    <div class="col mb-3">
+                                        <fieldset disabled>
+                                            <label for="exampleInputEmail1" class="form-label">Tanggal
+                                                Registrasi</label>
+                                            <input type="date" class="form-control" id="exampleInputEmail1"
+                                                value="09865432">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <!-- instruktur -->
+                                <div class="mb-3">
+                                    <fieldset disabled>
+                                        <label for="exampleInputEmail1" class="form-label">Instruktur</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Made Budi</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <!-- status -->
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Status</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Cuti</option>
+                                        <option value="1">Aktif</option>
+                                        <option value="2">Berakhir</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <div>
+                            <!-- keterangan -->
+                            <label for="floatingTextarea2">Keterangan</label>
+                            <textarea class="form-control" placeholder="keterangan..." id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- action button -->
+            <div class="d-flex flex-row gap-2 mx-2">
+                <!-- cek aktivitas -->
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button"
+                        class="btn bg-primary-dark shadow py-1 px-2 button hover-fade fw-bold text-white"
+                        data-bs-toggle="modal" data-bs-target="#cekAktivitas">
+                        <i class="fas fa-plus"></i>
+                        <span class="ps-2">Cek Aktivitas</span>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="cekAktivitas" tabindex="-1" aria-labelledby="cekAktivitasLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="cekAktivitasLabel">Detail</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <!-- preview print -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- buat jadwal -->
+                <div>
+                    <!-- buat jadwal -->
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button"
+                            class="btn bg-primary shadow py-1 px-2 button hover-fade fw-bold text-white"
+                            data-bs-toggle="modal" data-bs-target="#buatJadwal">
+                            <i class="fas fa-money-check"></i>
+                            <span class="ps-2">Buat Jadwal</span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="buatJadwal" tabindex="-1" aria-labelledby="buatJadwalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="buatJadwalLabel">Detail</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- form -->
+                                    <form action="">
+                                        <div class="modal-body">
+                                            <fieldset disabled>
+                                                <!-- biaya pendaftaran -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Pendaftaran</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya kegiatan -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Kegiatan</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya lainnya -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Lainnya</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- diskon -->
+                                                <div class="input-group mb-3 row">
+                                                    <label for="diskon">
+                                                        Diskon
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <input type="number" class="form-control col"
+                                                                    id="diskon" style="border-radius: 5px 0 0 5px;">
+                                                                <span
+                                                                    class="input-group-text col-3 justify-content-center"
+                                                                    style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                id="exampleInputEmail1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- jumlah total -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Jumlah
+                                                        Total</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- total dibayar -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Total
+                                                        Dibayar</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- sisa belum -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Sisa
+                                                        Belum</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                            <button type="button" class="btn bg-primary text-white">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tambah -->
+                <div>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button"
+                            class="btn bg-warning shadow py-1 px-2 button hover-fade fw-bold text-white"
+                            data-bs-toggle="modal" data-bs-target="#tambahOption">
+                            <i class="fas fa-plus"></i>
+                            <span class="ps-2">Tambah</span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="tambahOption" tabindex="-1" aria-labelledby="tambahOptionLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="tambahOptionLabel">Detail</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- form -->
+                                    <form action="">
+                                        <div class="modal-body">
+                                            <fieldset disabled>
+                                                <!-- biaya pendaftaran -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Pendaftaran</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya kegiatan -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Kegiatan</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya lainnya -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Lainnya</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- diskon -->
+                                                <div class="input-group mb-3 row">
+                                                    <label for="diskon">
+                                                        Diskon
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <input type="number" class="form-control col"
+                                                                    id="diskon" style="border-radius: 5px 0 0 5px;">
+                                                                <span
+                                                                    class="input-group-text col-3 justify-content-center"
+                                                                    style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                id="exampleInputEmail1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- jumlah total -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Jumlah
+                                                        Total</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- total dibayar -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Total
+                                                        Dibayar</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- sisa belum -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Sisa
+                                                        Belum</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                            <button type="button" class="btn bg-primary text-white">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cuti -->
+                <div>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button"
+                            class="btn bg-success shadow py-1 px-2 button hover-fade fw-bold text-white"
+                            data-bs-toggle="modal" data-bs-target="#cutiOption">
+                            <i class="fas fa-plus"></i>
+                            <span class="ps-2">Cuti</span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="cutiOption" tabindex="-1" aria-labelledby="cutiOptionLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="cutiOptionLabel">Detail</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- form -->
+                                    <form action="">
+                                        <div class="modal-body">
+                                            <fieldset disabled>
+                                                <!-- biaya pendaftaran -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Pendaftaran</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya kegiatan -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Kegiatan</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- biaya lainnya -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Biaya
+                                                        Lainnya</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- diskon -->
+                                                <div class="input-group mb-3 row">
+                                                    <label for="diskon">
+                                                        Diskon
+                                                    </label>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="row">
+                                                                <input type="number" class="form-control col"
+                                                                    id="diskon" style="border-radius: 5px 0 0 5px;">
+                                                                <span
+                                                                    class="input-group-text col-3 justify-content-center"
+                                                                    style="border-radius: 0 5px 5px 0 ;">%</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                id="exampleInputEmail1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- jumlah total -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Jumlah
+                                                        Total</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- total dibayar -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Total
+                                                        Dibayar</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                                <!-- sisa belum -->
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Sisa
+                                                        Belum</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1">
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a class="btn btn-secondary" data-bs-dismiss="modal">Tutup</a>
+                                            <button type="button" class="btn bg-primary text-white">Simpan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bersihkan -->
+                <div>
+                    <a href="#" class="btn bg-danger shadow py-1 px-2 button hover-fade fw-bold text-white">
+                        <i class="fas fa-plus"></i>
+                        <span class="ps-2">Bersihkan</span>
+                    </a>
+                </div>
+            </div>
+            <!-- content2 -->
+            <div class="row mx-2">
+                <!-- tabel -->
+                <div class="col-12 shadow my-5 p-3" style="overflow-x:auto">
+                    <table id="example" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Aksi</th>
+                                <th>Tanggal</th>
+                                <th>Jam</th>
+                                <th>Status</th>
+                                <th>Instruktur</th>
+                                <th>Studio</th>
+                                <th class="text-primary">Mulai</th>
+                                <th class="text-danger">Selesai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- status->pindah -->
+                            <tr class="bg-warning-2">
+                                <!-- # -->
+                                <td class="text-right fit">1</td>
+                                <!-- aksi -->
+                                <td>
+                                    <div class="d-flex gap-1 mt-2">
+                                        <!-- info -->
+                                        <div>
+                                            <a href="#" class="bg-primary text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Info">
+                                                <i class="fas fa-book"></i>
+                                            </a>
+                                        </div>
+                                        <!-- batal / pending -- d-none untuk menghilangkan salah satu -->
+                                        <div>
+                                            <!-- pending -->
+                                            <div>
+                                                <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Tertunda">
+                                                    <i class="fas fa-pause"></i>
+                                                </a>
+                                            </div>
+                                            <!-- batal -->
+                                            <div class="d-none">
+                                                <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Batal">
+                                                    <i class="fas fa-ban"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- pindah -->
+                                        <div>
+                                            <a href="#" class="bg-warning text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Pindah">
+                                                <i class="fas fa-exchange-alt"></i>
+                                            </a>
+                                        </div>
+                                        <!-- batal pindah -->
+                                        <div>
+                                            <a href="#" class="bg-warning text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Batal Pindah">
+                                                <i class="fas fa-undo-alt"></i>
+                                            </a>
+                                        </div>
+                                        <!-- hangus -->
+                                        <div>
+                                            <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Hangus">
+                                                <i class="fas fa-burn"></i>
+                                            </a>
+                                        </div>
+                                        <!-- hapus -->
+                                        <div>
+                                            <a href="#" class="bg-primary text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus">
+                                                <i class="fas fa-eraser"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- tanggal -->
+                                <td>Sel, 12-Apr-2021</td>
+                                <!-- jam -->
+                                <td>17:00</td>
+                                <!-- status -->
+                                <td>
+                                    <p class="bg-warning text-white p-2 rounded">Pindah</p>
+                                </td>
+                                <!-- instruktur -->
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Gitar Triwulan</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                                <!-- studi -->
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>01 - Gitar Mr.Michael/Nanda</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                                <!-- mulai -->
+                                <td class="text-primary">
+                                    <div class="d-flex gap-2">
+                                        <p>16:17</p>
+                                        <p>(admin)</p>
+                                    </div>
+                                </td>
+                                <!-- selesai -->
+                                <td class="text-danger">
+                                    <div class="d-flex gap-2">
+                                        <p>1:17</p>
+                                        <p>(admin)</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- status selesai -->
+                            <tr class="bg-primary-2">
+                                <!-- # -->
+                                <td class="text-right fit">2</td>
+                                <!-- aksi -->
+                                <td>
+                                    <div class="d-flex gap-1 mt-2">
+                                        <!-- info -->
+                                        <div>
+                                            <a href="#" class="bg-primary text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Info">
+                                                <i class="fas fa-book"></i>
+                                            </a>
+                                        </div>
+                                        <!-- batal / pending -- d-none untuk menghilangkan salah satu -->
+                                        <div>
+                                            <!-- pending -->
+                                            <div class="d-none">
+                                                <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Tertunda">
+                                                    <i class="fas fa-pause"></i>
+                                                </a>
+                                            </div>
+                                            <!-- batal -->
+                                            <div>
+                                                <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top" title="Batal">
+                                                    <i class="fas fa-ban"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- pindah -->
+                                        <div>
+                                            <a href="#" class="bg-warning text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Pindah">
+                                                <i class="fas fa-exchange-alt"></i>
+                                            </a>
+                                        </div>
+                                        <!-- batal pindah -->
+                                        <div>
+                                            <a href="#" class="bg-warning text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Batal Pindah">
+                                                <i class="fas fa-undo-alt"></i>
+                                            </a>
+                                        </div>
+                                        <!-- hangus -->
+                                        <div>
+                                            <a href="#" class="bg-danger text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Hangus">
+                                                <i class="fas fa-burn"></i>
+                                            </a>
+                                        </div>
+                                        <!-- hapus -->
+                                        <div>
+                                            <a href="#" class="bg-primary text-white p-2 rounded hover-fade"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Hapus">
+                                                <i class="fas fa-eraser"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <!-- tanggal -->
+                                <td>Sel, 12-Apr-2021</td>
+                                <!-- jam -->
+                                <td>17:00</td>
+                                <!-- status -->
+                                <td>
+                                    <p class="bg-primary text-white p-2 rounded">selesai</p>
+                                </td>
+                                <!-- instruktur -->
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Gitar Triwulan</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                                <!-- studi -->
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>01 - Gitar Mr.Michael/Nanda</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </td>
+                                <!-- mulai -->
+                                <td class="text-primary">
+                                    <div class="d-flex gap-2">
+                                        <p>16:17</p>
+                                        <p>(admin)</p>
+                                    </div>
+                                </td>
+                                <!-- selesai -->
+                                <td class="text-danger">
+                                    <div class="d-flex gap-2">
+                                        <p>1:17</p>
+                                        <p>(admin)</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- default -->
+                            <tr>
+                                <!-- # -->
+                                <td>3</td>
+                                <!-- aksi -->
+                                <td></td>
+                                <!-- tanggal -->
+                                <td></td>
+                                <!-- jam -->
+                                <td></td>
+                                <!-- status -->
+                                <td></td>
+                                <!-- instruktur -->
+                                <td></td>
+                                <!-- studio -->
+                                <td></td>
+                                <!-- mulai -->
+                                <td class="text-primary"></td>
+                                <!-- selesai -->
+                                <td class="text-danger"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>#</th>
+                                <th>Aksi</th>
+                                <th>Tanggal</th>
+                                <th>Jam</th>
+                                <th>Status</th>
+                                <th>Instruktur</th>
+                                <th>Studio</th>
+                                <th class="text-primary">Mulai</th>
+                                <th class="text-danger">Selesai</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="text-center">
+        <p>© 2021 BMTC - Made in Bali with <i class="far fa-heart"></i> by Gana IT Consultants.</p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <!-- jquery-3.6.0.min.js -->
+    <script src="src/js/jquery-3.6.0.min.js"></script>
+
+    <!-- fontawsome -->
+    <script src="src/lib/fontawesome-free-5.15.1-web/js/all.min.js"></script>
+
+    <!-- dataTables -->
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <!-- js -->
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

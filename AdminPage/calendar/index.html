@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jsCalendar -->
+    <link rel="stylesheet" type="text/css" href="src/lib/jsCalendar_v1.4.4/source/jsCalendar.css">
+    <script type="text/javascript" src="src/lib/jsCalendar_v1.4.4/source/jsCalendar.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- google-font Nunito  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="src/css/font.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="src/lib/fontawesome-free-5.15.1-web/css/all.min.css">
+
+    <!-- dataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+    <!-- my-css -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Admin Template</title>
+</head>
+
+<body>
+    <!-- body -->
+    <div class=" d-flex bg-1">
+        <!-- nav -->
+        <div class="nav col-xl-2 col-md-3 col-6 bg-1 vh-100-2 ps-md-4 flex-column position-md-absolute false-md">
+            <!-- logo -->
+            <div class="logo py-3 px-3 pb-5 position-relative">
+                <img src="src/img/logo.png" alt="logo.png" class="w-100" style="max-width: 100px;">
+                <div class="hamburger-menu1">
+                    <i class="back fas fa-arrow-left text-white position-absolute d-md-none d-block"
+                        style="font-size: 1.5rem;"></i>
+                </div>
+            </div>
+            <!-- nav-item -->
+            <div class="ps-1">
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="far fa-calendar-alt"></i>
+                    <a href="#" class="ps-3 item">Kalender</a>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-clipboard-list"></i>
+                    <a href="#" class="ps-3 item">Aktivitas</a>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-database"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Data Master</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-medal mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Siswa</span>
+                        </a>
+                        <a class="dropdown-item" href="/teachers"><i class="fas fa-users mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Instruktur</span>
+                        </a>
+                        <a class="dropdown-item" href="/courses"><i class="fa fa-microphone-alt mr-2"
+                                aria-hidden="true"></i>
+                            <span class="ps-2">Kursus</span>
+                        </a>
+                        <a class="dropdown-item" href="/programs">
+                            <i class="fa fa-music mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Program</span>
+                        </a>
+                        <a class="dropdown-item" href="/studios">
+                            <i class="fas fa-cube mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Studio</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Laporan</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="far fa-file-alt mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Aktivitas Siswa</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-users"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Instruktur</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-star mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Aktivitas Instruktur</span>
+                        </a>
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-money-check mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Pembayaran Instruktur</span>
+                        </a>
+                    </ul>
+                </div>
+                <!-- nav-link -->
+                <div class="nav-link d-flex align-items-center py-3 my-3">
+                    <i class="fas fa-clipboard-check"></i>
+                    <a href="#" class="ps-3 dropdown dropdown-toggle scroll item" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-expanded="false">Administrasi</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-user mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Pengguna</span>
+                        </a>
+                        <a class="dropdown-item" href="/students">
+                            <i class="fas fa-calendar-day mr-2" aria-hidden="true"></i>
+                            <span class="ps-2">Hari Libur</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- main-content -->
+        <div class="main-content col-xl-10 col-md-9 col-12 vh-100-2 bg-white py-3 container-fluid">
+            <!-- navbar -->
+            <div class="ps-4 d-flex justify-content-between">
+                <!-- hamburger menu -->
+                <div class="hamburger-menu2 d-md-none d-block">
+                    <i class="fas fa-bars clr-1" style="font-size:2rem"></i>
+                </div>
+                <!-- search -->
+                <div class="search-navbar">
+                    <form action="" class="d-flex justify-content-center">
+                        <input type="text" class="search-input shadow py-2 px-4" placeholder="searching...">
+                    </form>
+                </div>
+                <!-- action-user -->
+                <div class="d-flex gap-2 px-3">
+                    <!-- notification -->
+                    <div class="gap-4 d-flex">
+                        <!-- message -->
+                        <div class="message">
+                            <a class="dropdown dropdown-toggle scroll" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                                <i class="fas fa-comments clr-1" style="font-size:1.5rem">
+                                </i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- user-profile -->
+                                    <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                                    <!-- message -->
+                                    <div class="list-group">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">List group item heading</h5>
+                                            <small>3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                        <small>And some small print.</small>
+                                    </div>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                            </div>
+                        </div>
+                        <!-- notification -->
+                        <div class="notifications">
+                            <a class="dropdown dropdown-toggle scroll" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false">
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                                <i class="fas fa-bell clr-1" style="font-size:1.5rem"></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- message-item -->
+                                <div class="p-2 d-flex gap-4">
+                                    <!-- message -->
+                                    <ul>
+                                        <li class="list-group">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">List group item heading</h5>
+                                                <small>3 days ago</small>
+                                            </div>
+                                            <p class="mb-1">Some placeholder content in a paragraph.</p>
+                                            <small>And some small print.</small>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- hr -->
+                                <hr class="dropdown-divider">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- action -->
+                    <div class="action">
+                        <a class="ps-4 d-flex gap-3 user-action dropdown dropdown-toggle" data-bs-toggle="dropdown"
+                            href="#" role="button" aria-expanded="false">
+                            <i class="fas fa-user-circle clr-1" style="font-size:1.5rem"></i>
+                            <p class="d-md-block d-none">Made Adi</p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="ps-2">Pengaturan</span>
+                                </a>
+                            <li>
+                                <hr class="dropdown-divider">
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="ps-2">Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <div class="main py-5 px-3">
+                <h1 class="h3">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="fw-bold">Kalender</span>
+                </h1>
+                <!-- content1 -->
+                <div class="content1 row row-cols-xl-3 row-cols-sm-2 row-cols-1  mt-5">
+                    <!-- card1 -->
+                    <div class="col card1 d-flex flex-column gap-3 p-1">
+                        <div class="m-1 bg-primary text-white  shadow p-3 rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="display-3">60</h3>
+                                <div>
+                                    <i class="fas fa-check" style="font-size:3rem"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold">Normal</p>
+                        </div>
+                    </div>
+                    <!-- card1 -->
+                    <div class="col card1 d-flex flex-column gap-3 p-1">
+                        <div class="m-1 bg-warning text-white  shadow p-3 rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="display-3">60</h3>
+                                <div>
+                                    <i class="fas fa-exclamation" style="font-size: 3rem;"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold">Pembayaran Tinggal Untuk 1x Pertemuan</p>
+                        </div>
+                    </div>
+                    <!-- card1 -->
+                    <div class="col card1 d-flex flex-column gap-3 p-1">
+                        <div class="m-1 bg-danger text-white  shadow p-3 rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="display-3">60</h3>
+                                <div>
+                                    <i class="fas fa-exclamation" style="font-size: 3rem;"></i>
+                                </div>
+                            </div>
+                            <p class="fw-bold">Pembayarann Diperlukan</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- content2 -->
+                <div class="row my-5">
+                    <!-- col-1 -->
+                    <div class="col">
+                        <!-- jsCalender -->
+                        <div class="auto-jsCalendar"></div>
+                    </div>
+                    <!-- col-2 -->
+                    <div class="col">
+                        <h6 class="mb-2 h4">
+                            <i class="far fa-calendar-check"></i>
+                            <span>Rabu, 08 Desember 2021</span>
+                        </h6>
+                        <!-- table -->
+                        <table class="table table-bordered d-block shadow-sm" style="overflow: auto;">
+                            <thead>
+                                <tr class="table-light">
+                                    <th colspan="2"></th>
+                                    <th colspan="9" class="text-center">Jam</th>
+                                </tr>
+                                <tr class="table-light">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Studio</th>
+                                    <th scope="col">10:00</th>
+                                    <th scope="col">11:00</th>
+                                    <th scope="col">12:00</th>
+                                    <th scope="col">13:00</th>
+                                    <th scope="col">14:00</th>
+                                    <th scope="col">15:00</th>
+                                    <th scope="col">16:00</th>
+                                    <th scope="col">17:00</th>
+                                    <th scope="col">18:00</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>GITAR - Mr. Michael/ Nanda</td>
+                                    <!-- jam -->
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-danger-2">
+                                                <span>Ratna</span>
+                                                <i class="fas fa-star"></i>
+                                                <span>bmtc</span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-warning-2">
+                                                <span>Ratna</span>
+                                                <i class="fas fa-star"></i>
+                                                <span>bmtc</span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Piano/ Biola- Miss. Dwara / /Mr.Tangkas</td>
+                                    <!-- jam -->
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-primary-2">
+                                                <span>Ratna</span>
+                                                <i class="fas fa-star"></i>
+                                                <span>bmtc</span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>PIANO - Miss. Icha/ Tu Ana</td>
+                                    <!-- jam -->
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-danger-2">
+                                                <span>Ratna</span>
+                                                <i class="fas fa-star"></i>
+                                                <span>bmtc</span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-primary-2">
+                                                <span>Ratna</span>
+                                                <i class="fas fa-star"></i>
+                                                <span>bmtc</span>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="" class="d-flex justify-content-center">
+                                            <button class="btn btn-outline-primary-2">
+                                                <i class="fas fa-music"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="text-center">
+                <p>© 2021 BMTC - Made in Bali with <i class="far fa-heart"></i> by Gana IT Consultants.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <!-- jquery-3.6.0.min.js -->
+    <script src="src/js/jquery-3.6.0.min.js"></script>
+
+    <!-- fontawsome -->
+    <script src="src/lib/fontawesome-free-5.15.1-web/js/all.min.js"></script>
+
+    <!-- dataTables -->
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <!-- js -->
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>

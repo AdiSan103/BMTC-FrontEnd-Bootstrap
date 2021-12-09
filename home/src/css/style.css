@@ -1,0 +1,312 @@
+body {
+    overflow-x: hidden;
+}
+
+.vh-100-2 {
+    min-height: 100vh;
+}
+
+.bg-1 {
+    background: #0E1028;
+    z-index: -2;
+}
+
+.bg-2 {
+    background: #D2003A;
+}
+
+.text-color-1 {
+    color: #D2003A;
+}
+
+/* nav */
+.navbar1 ul {
+    list-style: none;
+}
+.navbar1 ul li a{
+    text-decoration: none;
+}
+.navbar1 img.logo {
+    max-width: 100px;
+}
+.navbar-title {
+    min-width: 50%;
+}
+.navbar1-link {
+    min-width: 45%;
+}
+.navbar-account {
+    min-width: 5%;
+}
+.navbar1-link ul{
+    min-width: 100%;
+    height: 100%;
+    transition: .75s;
+}
+.navbar1-link li a{
+    color: black;
+    transition: .25s;
+    width: 100%;
+}
+.navbar1-link li a:hover {
+    background: black;
+    color: white;
+}
+.navbar1 {
+    background: rgb(255, 255, 255);
+}
+
+@media (max-width: 992px) {
+    .navbar-title,
+    .navbar1-link ul{
+        background: white;
+    }
+    .navbar1  {
+        background: rgba(255, 255, 255, 0);
+    }
+    .navbar-title {
+        min-width: 100%;
+    }
+    .navbar1-link ul{
+        min-width: 75vw;
+        min-height: 90vh;
+        transform: translateX(-100%);
+    }
+    .navbar1-link ul.true{
+        transform: translateX(0%);
+    }
+}
+.navbar1 input {
+    border-radius: 20px;
+    padding: 7px 15px;
+    transition: .25s;
+    width: 400px;
+}
+.navbar1 input:focus {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px 2px rgba(3, 3, 3, 0.329);
+}
+@media (max-width:600px) {
+    .navbar1 img.logo {
+        max-width: 50px;
+    }
+
+    .navbar1 input {
+        padding: 7px 15px;
+        width:200px;
+    }
+}
+.hamburger-menu{
+  cursor: pointer;  
+}
+.hamburger-1 {
+    height: 5px;
+    width: 40px;
+}
+.hamburger-2 {
+    height: 5px;
+    width: 35px;
+}
+.hamburger-3 {
+    height: 5px;
+    width: 25px;
+}
+.hamburger-1,
+.hamburger-2,
+.hamburger-3 {
+    margin: 3px;
+    background: #D2003A;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.hamburger-1.true {
+    transform: rotate(45deg) translate(10px, 1px);
+}
+
+.hamburger-2.true  {
+    opacity: 0;
+    transform: translatex(20px);
+}
+
+.hamburger-3.true  {
+ width: 40px;
+ transform: rotate(-45deg) translate(13px, -5px);
+}
+
+
+
+/* banner */
+.banner {
+    background: url('../img/Asset\ 15.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .overlay-1 {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.486), #0E1028);
+}
+
+.banner .button {
+    background: linear-gradient(to right ,#93428F, #D2003A, #D2903A);
+    width: 180px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.banner .button a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner .button-main{   
+    padding: 10px; 
+    min-width: 100%;
+    background: rgb(3, 3, 3);
+    transition: .25s;
+}
+
+.banner .button-main:hover {
+    transform: translate(-5px,-5px) scale(1.05);
+}
+
+/* content1 */
+.content1 {
+    overflow-x: hidden;
+}
+
+.content1 .button {
+    text-decoration: none;
+    color: white;
+    border: 3px solid rgb(193,39,45);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .25s;
+    background: black;
+}
+
+.content1 .button:hover {
+    background: rgb(193,39,45);
+    border: none;
+}
+
+.content1 .card1 img{
+    max-width: 200px;
+}
+
+.content1 svg {
+ width: 250px;
+}
+
+.content1 a.button2 {
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    top: 10px;
+    transition: .25s;
+}
+.content1 a.button2:hover {
+    transform: translateX(10px);
+}
+/* content2 */
+.content2 .left {
+    z-index: 1;
+}
+
+.content2 .left svg {
+    z-index: -1;
+    left: 20%;
+    top: 10%;
+    max-width: 320px;
+}
+
+.content2 .left img {
+    max-width: 320px;
+}
+
+.content2 .right p {
+    text-align: justify;
+}
+
+/* content3 */
+.content3 svg {
+    max-width: 150px;
+}
+
+/* content4 */
+.content4 .card3{
+    z-index: 1;
+    padding: 25px;
+}
+.content4 .card3 svg {
+    z-index: -1;
+    top: 50px;
+    left: -6%;
+}
+.content4 .button3 {
+    text-decoration: none;
+    background-color: white;
+    padding: 6px 5px;
+    color: black;
+}
+
+/* testimoni */
+.testimoni .splide {
+    max-width: 800px;
+    width: 100%;
+}
+@media (max-width:786px) {
+    .testimoni .splide {
+        max-width: 90vw;
+    }
+}
+.testimoni .testimoni-card {
+    margin: 50px 0;
+}
+.testimoni .testimoni-card-main{
+    background: white;
+    padding: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+.testimoni .testimoni-card img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+.testimoni .bg-testimoni {
+    border: 5px solid red;
+    height: 80%;
+    position: absolute;
+    width: 90%;
+    top: 10px;
+    z-index: -1;
+    margin: 70px 30px;
+}
+.testimoni .testimoni-card h3 {
+    top: -15px;
+    font-size: 150px;
+}
+
+/* footer  */
+.footer.row {
+    margin:auto!important;
+}
+.footer .logo img {
+    max-width: 200px;
+    max-height: 150px;
+}
+.footer .navigation a{
+    text-decoration: none;
+    color: white;
+}
+.footer .sosialMedia svg{
+    width: 80%;
+    color: white;
+    max-width: 50px;
+}
+.footer .support a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+}
